@@ -77,8 +77,8 @@ header h1,
 .payoff h1,
 .details .carousel,
 .social a:hover{
-	 color: #0bf397;  
-	/*color:white; */
+	/* color: #0bf397;  */
+	color:white; 
 
 }
 
