@@ -152,7 +152,7 @@ nav.navbar.fixed-to-top{
 /*-----------------------------------------------------------------------------------*/
 
 header{
-	padding: 150px 0px 0px 0px;
+	padding: 100px 0px 0px 0px;
 	height: 960px;
 	background: url('../img/nepal.jpg');
 	background-color: white!important;
@@ -165,9 +165,9 @@ header h1{
 	text-transform: uppercase;
 	font-weight: 700;
 	font-weight: 300;
-	font-size: 100px;
+	font-size: 80px;
 	font-family: 'Roboto Condensed', sans-serif;
-	
+
 }
 
 header p.lead{
