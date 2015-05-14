@@ -15,6 +15,7 @@ AV.Cloud.afterSave('_Followee', function(request) {
     error: function(user, error) {
       throw 'Got an error ' + error.code + ' : ' + error.message;
     }
+  })
 });
 
 AV.Cloud.afterSave('_Follower', function(request) {
@@ -27,4 +28,5 @@ AV.Cloud.afterSave('_Follower', function(request) {
     error: function(user, error) {
       throw 'Got an error ' + error.code + ' : ' + error.message;
     }
+  })
 });
