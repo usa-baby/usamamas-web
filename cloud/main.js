@@ -19,13 +19,15 @@ AV.Cloud.afterSave('_Followee', function(request) {
 });
 
 AV.Cloud.afterSave('_Follower', function(request) {
-  user = request.user
-  user.increment('followerCount');
-  user.save(null, {
+  userId = request.object.get('user').id
+  var query = new AV.Query(AV.User);
+  query.get(userId, {
     success: function(user) {
+      user.increment('followerCount');
+      user.save();
       console.log('Increment of follower for :' + user.username);
     },
-    error: function(user, error) {
+    error: function(error) {
       throw 'Got an error ' + error.code + ' : ' + error.message;
     }
   })
