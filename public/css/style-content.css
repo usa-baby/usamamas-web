@@ -29,7 +29,7 @@ h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6{
 	font-weight: 700;
 	font-family: 'Roboto Condensed', sans-serif;
 }
-/*
+
 h1{
 		padding-bottom: 30px;
 }
@@ -37,10 +37,10 @@ h2{
 	text-align: left;
 	font-size: 1.4em;
 }
-*/
+
 p{
 	font-size: 1.2em;
-	/*text-align:left;*/
+	text-align:left;
 }
 
 .subtitle{
