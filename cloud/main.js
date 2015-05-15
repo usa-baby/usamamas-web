@@ -10,7 +10,7 @@ AV.Cloud.afterSave('_Followee', function(request) {
   user.increment('followeeCount');
   user.save(null, {
     success: function(user) {
-      console.log('Increment of followee for :' + user.username);
+//      console.log('Increment of followee for :' + user);
     },
     error: function(error) {
       throw 'Got an error ' + error.code + ' : ' + error.message;
@@ -25,7 +25,7 @@ AV.Cloud.afterSave('_Follower', function(request) {
     success: function(user) {
       user.increment('followerCount');
       user.save();
-      console.log('Increment of follower for :' + user.username);
+//      console.log('Increment of follower for :' + user);
     },
     error: function(error) {
       throw 'Got an error ' + error.code + ' : ' + error.message;
@@ -38,7 +38,7 @@ AV.Cloud.afterDelete('_Followee', function(request) {
   user.increment('followeeCount', -1);
   user.save(null, {
     success: function(user) {
-      console.log('decrement of followee for :' + user.username);
+//      console.log('decrement of followee for :' + user);
     },
     error: function(error) {
       throw 'Got an error ' + error.code + ' : ' + error.message;
@@ -53,7 +53,7 @@ AV.Cloud.afterDelete('_Follower', function(request) {
     success: function(user) {
       user.increment('followerCount', -1);
       user.save();
-      console.log('decrement of follower for :' + user.username);
+//      console.log('decrement of follower for :' + user);
     },
     error: function(error) {
       throw 'Got an error ' + error.code + ' : ' + error.message;
