@@ -12,7 +12,7 @@ AV.Cloud.afterSave('_Followee', function(request) {
     success: function(user) {
       console.log('Increment of followee for :' + user.username);
     },
-    error: function(user, error) {
+    error: function(error) {
       throw 'Got an error ' + error.code + ' : ' + error.message;
     }
   })
@@ -24,6 +24,34 @@ AV.Cloud.afterSave('_Follower', function(request) {
   query.get(userId, {
     success: function(user) {
       user.increment('followerCount');
+      user.save();
+      console.log('Increment of follower for :' + user.username);
+    },
+    error: function(error) {
+      throw 'Got an error ' + error.code + ' : ' + error.message;
+    }
+  })
+});
+
+AV.Cloud.afterDelete('_Followee', function(request) {
+  user = request.user
+  user.decrement('followeeCount');
+  user.save(null, {
+    success: function(user) {
+      console.log('Increment of followee for :' + user.username);
+    },
+    error: function(error) {
+      throw 'Got an error ' + error.code + ' : ' + error.message;
+    }
+  })
+});
+
+AV.Cloud.afterDelete('_Follower', function(request) {
+  userId = request.object.get('user').id
+  var query = new AV.Query(AV.User);
+  query.get(userId, {
+    success: function(user) {
+      user.decrement('followerCount');
       user.save();
       console.log('Increment of follower for :' + user.username);
     },
