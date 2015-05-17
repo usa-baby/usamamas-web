@@ -106,6 +106,14 @@ header h1,
 	background: #0bf397;	
 }
 	
+.footer p{
+	color: #06b872;
+}
+
+.footer,
+.detail .carousel-indicators .active {
+	background: #0bf397;	
+}
 
 /*-----------------------------------------------------------------------------------*/
 /* NAVBAR
