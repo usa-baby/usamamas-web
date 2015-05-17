@@ -137,6 +137,7 @@ nav.navbar.fixed-to-top{
 	top: 0px;
 }
 
+
 .navbar-default{
 	border: none;
 	border-bottom: 1px solid #eee;
@@ -148,6 +149,7 @@ nav.navbar.fixed-to-top{
 .navbar-default .navbar-nav>li>a {
 	color: #aaa;
 	font-size: 1.2em;
+	right:-30px;
 }
 
 .navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus{
