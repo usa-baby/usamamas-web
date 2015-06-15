@@ -253,7 +253,8 @@ header .carousel-indicators li {
 .purchase button.app-store{
 	width: 152px;
 	height: 52px;
-	background: url(../img/badge-appstore.png) #3a3a3a no-repeat 0px 5px;
+	background: url(../img/badge-appstore.png) #3a3a3a no-repeat 0px 5px; 
+	/* background: url(../img/appstore-download-office.png)  no-repeat 0px 0px; */
 	color: white;
 }
 
@@ -448,7 +449,8 @@ header .carousel-indicators li {
 .get-it button.app-store{
 	width: 152px;
 	height: 52px;
-	background: url(../img/badge-appstore.png) #373737 no-repeat 0px 5px;
+	background: url(../img/badge-appstore.png) #3a3a3a no-repeat 0px 5px;
+	 /* background: url(../img/appstore-download-office.png)  no-repeat 0px 0px; */
 	color: white;
 }
 
